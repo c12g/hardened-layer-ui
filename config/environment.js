@@ -13,6 +13,11 @@ module.exports = function(environment) {
       }
     },
 
+    SL: {
+      host: 'http://localhost:4200',
+      namespace: 'mock/v1',
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

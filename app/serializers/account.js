@@ -1,4 +1,4 @@
-import DS from 'ember-data';
+import SoftLayerSerializer from './softlayer';
 
-export default DS.RESTSerializer.extend({
+export default SoftLayerSerializer.extend({
 });

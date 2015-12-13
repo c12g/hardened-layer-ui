@@ -1,4 +1,12 @@
-import ApplicationAdapter from './application';
+import DS from 'ember-data';
+import config from '../config/environment';
 
-export default ApplicationAdapter.extend({
+export default DS.RESTAdapter.extend({
+  host: config.SL.host,
+  namespace: config.SL.namespace,
+
+  init: function() {
+    this._super();
+    console.log('SoftLayerAdapter: ' + config.SL.host + '...');
+  }
 });

@@ -15,7 +15,7 @@ module.exports = function(environment) {
 
     SL: {
       host: 'http://localhost:4200',
-      namespace: 'mock/rest',
+      namespace: 'mock/embedded',
     },
 
     contentSecurityPolicy: {

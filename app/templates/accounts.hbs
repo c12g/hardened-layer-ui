@@ -1,20 +1,9 @@
-
 <ul>
 {{#each account in model}}
 <li>
 {{account.companyName}}
 (contact: {{account.email}})
 </li>
-<ul>
-{{#each server in account.servers }}
-<li>{{server.id}} {{server.hostname}}.{{server.domain}}
-- {{server.maxCpu}} CPU/{{server.maxMemory}} MB
-- {{server.createDate}}
-{{server.primaryIpAddress}}
-{{server.hourlyBillingFlag}}
-</li>
-{{/each}}
-</ul>
 {{else}}
 <li>No accounts found.</li>
 {{/each}}

@@ -1,1 +1,12 @@
+<ul>
+{{#each item in model }}
+<li>{{item.id}} {{item.hostname}}.{{item.domain}}
+- {{item.maxCpu}} CPU/{{item.maxMemory}} MB
+- {{item.createDate}}
+{{item.primaryIpAddress}}
+{{item.hourlyBillingFlag}}
+</li>
+{{/each}}
+</ul>
+
 {{outlet}}

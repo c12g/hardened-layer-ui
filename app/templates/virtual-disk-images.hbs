@@ -1,1 +1,11 @@
+<ul>
+{{#each item in model }}
+<li>{{item.id}}
+	{{item.uuid}}
+- {{item.capacity}} {{item.units}}
+- {{item.name}}.{{item.description}}
+</li>
+{{/each}}
+</ul>
+
 {{outlet}}

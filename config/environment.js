@@ -15,7 +15,11 @@ module.exports = function(environment) {
 
     SL: {
       host: 'http://localhost:4200',
-      namespace: 'mock/v1',
+      namespace: 'mock/jsonapi',
+    },
+
+    contentSecurityPolicy: {
+      'connect-src': "'self' localhost:3000",
     },
 
     APP: {

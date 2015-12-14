@@ -1,0 +1,65 @@
+{
+   "data" : [
+      {
+         "type" : "accounts",
+         "id" : 998113,
+         "attributes" : {
+            "email" : "james.bond@example.com",
+            "companyName" : "Example Co"
+         },
+         "relationships" : {
+            "servers" : {
+               "data" : [
+                  {
+                     "type" : "servers",
+                     "id" : 99407465
+                  },
+                  {
+                     "type" : "servers",
+                     "id" : 99159233
+                  },
+                  {
+                     "type" : "servers",
+                     "id" : 99363151
+                  }
+               ]
+            }
+         },
+         "links" : {
+            "url" : "http://localhost:3000/api/v1/accounts/998113"
+         }
+      }
+   ],
+   "included" : [
+      {
+         "type" : "server",
+         "id" : 99407465,
+         "attributes" : {
+            "domain" : "example.com",
+            "hostname" : "test-dev-image",
+            "maxMemory" : 1024,
+            "maxCpu" : 1
+         }
+      },
+      {
+         "type" : "server",
+         "id" : 99159233,
+         "attributes" : {
+            "domain" : "example.com",
+            "hostname" : "test-dev-mongo02",
+            "maxMemory" : 1024,
+            "maxCpu" : 1
+         }
+      },
+      {
+         "type" : "server",
+         "id" : 99363151,
+         "attributes" : {
+            "domain" : "example.com",
+            "hostname" : "test-dev-teststorage",
+            "maxMemory" : 1024,
+            "maxCpu" : 1
+         }
+      }
+   ]
+}

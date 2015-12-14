@@ -1,19 +1,24 @@
-<h2 id="title">Hardened Layer</h2>
+{{#ui-sidebar class="inverted vertical menu"}}
+	{{link-to 'Home' 'index' class='item'}}
+	{{link-to 'Account' 'accounts' class='item'}}
+	{{link-to 'Servers' 'servers' class='item'}}
+	{{link-to 'Virtual Servers' 'virtual-servers' class='item'}}
+	{{link-to 'Bare Metal' 'bare-metal-servers' class='item'}}
+	{{link-to 'Image Template' 'image-templates' class='item'}}
+	{{link-to 'Open Tickets' 'open-tickets' class='item'}}
+	{{link-to 'Users' 'users' class='item'}}
+	{{link-to 'Virtual Disks' 'virtual-disk-images' class='item'}}
+{{/ui-sidebar}}
 
-<div id="category-list" class="ui menu" style="float:left; margin: 0 1em">
-	<ul style="padding: 0">
-		<li>{{link-to 'Home' 'index'}}</li>
-		<li>{{link-to 'Account' 'accounts'}}</li>
-		<li>{{link-to 'Servers' 'servers'}}</li>
-		<li>{{link-to 'Virtual Servers' 'virtual-servers'}}</li>
-		<li>{{link-to 'Bare Metal' 'bare-metal-servers'}}</li>
-		<li>{{link-to 'Image Template' 'image-templates'}}</li>
-		<li>{{link-to 'Open Tickets' 'open-tickets'}}</li>
-		<li>{{link-to 'Users' 'users'}}</li>
-		<li>{{link-to 'Virtual Disks' 'virtual-disk-images'}}</li>
-	</ul>
+<div class="ui fixed inverted small menu">
+	<a class="launch icon item" onClick="$('.ui.sidebar').sidebar('toggle');"
+		><i class="content icon"></i></a>
+	<a class="active red item">Hardened Layer</a>
+	<div class="right menu">
+		<a class="ui item">Logout</a>
+	</div>
 </div>
 
-<div id="main-panel" class="ui panel">
+<div class="ui grid pusher">
 {{outlet}}
 </div>

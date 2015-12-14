@@ -20,7 +20,9 @@ module.exports = function(environment) {
 
     contentSecurityPolicy: {
       'connect-src': "'self' localhost:3000",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
       'style-src': "'self' 'unsafe-inline'",
+      'font-src': "'self' fonts.gstatic.com",
     },
 
     APP: {

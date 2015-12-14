@@ -1,0 +1,525 @@
+{
+   "accounts" : [
+      {
+         "id" : 998113,
+         "allowedPptpVpnQuantity" : 1,
+         "email" : "james.bond@example.com",
+         "companyName" : "Example Co",
+         "firstName" : "James",
+         "lastName" : "Bond",
+         "modifyDate" : "2015-11-23T20:48:27+09:00",
+         "statusDate" : "",
+         "brandId" : 99088,
+         "accountStatusId" : 1001,
+         "servers" : [
+            99407465,
+            99159233,
+            99363151
+         ],
+         "address1" : "26 Street",
+         "createDate" : "2015-11-23T20:48:23+09:00",
+         "state" : "OT",
+         "city" : "Seoul",
+         "lateFeeProtectionFlag" : "",
+         "postalCode" : "99999",
+         "accountManagedResourcesFlag" : false,
+         "claimedTaxExemptTxFlag" : false,
+         "country" : "KR",
+         "isReseller" : 0,
+         "officePhone" : "+82-10-1234-5678"
+      }
+   ],
+   "servers" : [
+      {
+         "privateNetworkOnlyFlag" : false,
+         "createDate" : "2015-12-09T18:37:13+09:00",
+         "blockDevices" : [
+            {
+               "mountType" : "Disk",
+               "uuid" : "99345678-0000-90ab-c951-13547f2c2a1e",
+               "modifyDate" : "",
+               "diskImageId" : 99205217,
+               "statusId" : 1,
+               "bootableFlag" : 1,
+               "mountMode" : "RW",
+               "id" : 99665869,
+               "guestId" : 99407465,
+               "createDate" : "2015-12-09T18:41:23+09:00",
+               "hotPlugFlag" : 0,
+               "device" : "0"
+            },
+            {
+               "statusId" : 1,
+               "modifyDate" : "",
+               "diskImageId" : 99205251,
+               "uuid" : "99345678-0000-90ab-dc4b-7b30418518ff",
+               "mountType" : "Disk",
+               "createDate" : "2015-12-09T18:41:31+09:00",
+               "hotPlugFlag" : 0,
+               "device" : "1",
+               "id" : 99665873,
+               "guestId" : 99407465,
+               "mountMode" : "RW",
+               "bootableFlag" : 0
+            },
+            {
+               "mountMode" : "RW",
+               "bootableFlag" : 0,
+               "createDate" : "2015-12-09T18:43:53+09:00",
+               "hotPlugFlag" : 0,
+               "device" : "2",
+               "id" : 99665925,
+               "guestId" : 99407465,
+               "uuid" : "99345678-0000-90ab-661f-2d5377ca76aa",
+               "mountType" : "Disk",
+               "statusId" : 1,
+               "modifyDate" : "",
+               "diskImageId" : 99205253
+            },
+            {
+               "mountMode" : "RW",
+               "bootableFlag" : 0,
+               "hotPlugFlag" : 0,
+               "createDate" : "2015-12-09T18:44:10+09:00",
+               "device" : "4",
+               "id" : 99665935,
+               "guestId" : 99407465,
+               "uuid" : "99345678-0000-90ab-bdc5-f59cc2711d5e",
+               "mountType" : "Disk",
+               "statusId" : 1,
+               "modifyDate" : "",
+               "diskImageId" : 99205285
+            }
+         ],
+         "dedicatedAccountHostOnlyFlag" : false,
+         "blockDeviceTemplateGroup" : {
+            "name" : "test-image-create",
+            "globalIdentifier" : "99345678-0000-90ab-8ade-0d55f651f829",
+            "id" : 990017
+         },
+         "datacenter" : {
+            "name" : "tok02",
+            "longName" : "Tokyo 2",
+            "id" : 999604,
+            "statusId" : 2
+         },
+         "status" : {
+            "keyName" : "ACTIVE",
+            "name" : "Active"
+         },
+         "powerState" : {
+            "keyName" : "RUNNING",
+            "name" : "Running"
+         },
+         "hourlyBillingFlag" : true,
+         "fullyQualifiedDomainName" : "test-dev-image.example.com",
+         "tagReferences" : [],
+         "networkVlans" : [
+            {
+               "networkSpace" : "PRIVATE",
+               "vlanNumber" : 1271,
+               "id" : 9990741
+            },
+            {
+               "networkSpace" : "PUBLIC",
+               "vlanNumber" : 1273,
+               "id" : 9990739
+            }
+         ],
+         "hostname" : "test-dev-image",
+         "id" : 99407465,
+         "primaryIpAddress" : "192.168.15.30",
+         "primaryBackendIpAddress" : "10.10.40.243",
+         "globalIdentifier" : "99345678-0000-90ab-a7d8-d02063a77e02",
+         "userData" : [],
+         "operatingSystem" : {
+            "softwareLicense" : {
+               "id" : 901,
+               "softwareDescription" : {
+                  "manufacturer" : "CentOS",
+                  "referenceCode" : "CENTOS_6_64",
+                  "name" : "CentOS",
+                  "version" : "6.0-64 LAMP for VSI"
+               },
+               "softwareDescriptionId" : 888
+            },
+            "hardwareId" : "",
+            "id" : 9999405,
+            "passwords" : [
+               {
+                  "password" : "P455w0rd",
+                  "username" : "root"
+               }
+            ],
+            "manufacturerLicenseInstance" : ""
+         },
+         "networkComponents" : [
+            {
+               "name" : "eth",
+               "port" : 0,
+               "macAddress" : "06:6c:2a:7d:5b:b9",
+               "primarySubnet" : {
+                  "netmask" : "255.255.255.192",
+                  "gateway" : "10.10.40.193",
+                  "networkIdentifier" : "10.10.40.192",
+                  "id" : 9985667,
+                  "broadcastAddress" : "10.10.40.255"
+               },
+               "id" : 9926935,
+               "primaryIpAddress" : "10.10.40.243",
+               "speed" : 100,
+               "maxSpeed" : 100,
+               "status" : "ACTIVE"
+            },
+            {
+               "maxSpeed" : 100,
+               "speed" : 100,
+               "status" : "ACTIVE",
+               "port" : 1,
+               "name" : "eth",
+               "macAddress" : "06:72:c8:f9:6a:57",
+               "primaryIpAddress" : "192.168.15.30",
+               "id" : 9926933,
+               "primarySubnet" : {
+                  "broadcastAddress" : "192.168.15.31",
+                  "id" : 9985405,
+                  "networkIdentifier" : "192.168.15.16",
+                  "gateway" : "192.168.15.17",
+                  "netmask" : "255.255.255.240"
+               }
+            }
+         ],
+         "modifyDate" : "2015-12-10T18:31:17+09:00",
+         "provisionDate" : "2015-12-09T18:45:35+09:00",
+         "billingItem" : {
+            "id" : 99415113,
+            "recurringFee" : "2.301"
+         },
+         "maxMemory" : 1024,
+         "maxCpu" : 1,
+         "domain" : "example.com"
+      },
+      {
+         "maxCpu" : 1,
+         "domain" : "example.com",
+         "billingItem" : {
+            "id" : 99327651,
+            "recurringFee" : "12.71"
+         },
+         "maxMemory" : 1024,
+         "provisionDate" : "2015-11-30T15:04:31+09:00",
+         "networkComponents" : [
+            {
+               "status" : "ACTIVE",
+               "speed" : 100,
+               "maxSpeed" : 100,
+               "id" : 9915755,
+               "primarySubnet" : {
+                  "broadcastAddress" : "10.10.40.255",
+                  "id" : 9985667,
+                  "netmask" : "255.255.255.192",
+                  "gateway" : "10.10.40.193",
+                  "networkIdentifier" : "10.10.40.192"
+               },
+               "primaryIpAddress" : "10.10.40.246",
+               "macAddress" : "06:11:4e:6a:84:57",
+               "port" : 0,
+               "name" : "eth"
+            },
+            {
+               "maxSpeed" : 100,
+               "speed" : 100,
+               "status" : "ACTIVE",
+               "macAddress" : "06:8f:6e:36:74:94",
+               "name" : "eth",
+               "port" : 1,
+               "primaryIpAddress" : "192.168.15.24",
+               "id" : 9915753,
+               "primarySubnet" : {
+                  "broadcastAddress" : "192.168.15.31",
+                  "id" : 9985405,
+                  "networkIdentifier" : "192.168.15.16",
+                  "gateway" : "192.168.15.17",
+                  "netmask" : "255.255.255.240"
+               }
+            }
+         ],
+         "modifyDate" : "2015-11-30T15:04:31+09:00",
+         "operatingSystem" : {
+            "softwareLicense" : {
+               "id" : 901,
+               "softwareDescriptionId" : 888,
+               "softwareDescription" : {
+                  "manufacturer" : "CentOS",
+                  "version" : "6.0-64 LAMP for VSI",
+                  "name" : "CentOS",
+                  "referenceCode" : "CENTOS_6_64"
+               }
+            },
+            "hardwareId" : "",
+            "id" : 9903405,
+            "passwords" : [
+               {
+                  "password" : "P455w0rd",
+                  "username" : "root"
+               }
+            ],
+            "manufacturerLicenseInstance" : ""
+         },
+         "userData" : [
+            {
+               "value" : "test-dev-mongo02.example.com",
+               "type" : {
+                  "keyname" : "USER_DATA",
+                  "name" : "User Data"
+               }
+            }
+         ],
+         "globalIdentifier" : "99345678-0000-90ab-b999-027e1e7155c6",
+         "primaryBackendIpAddress" : "10.10.40.246",
+         "primaryIpAddress" : "192.168.15.24",
+         "id" : 99159233,
+         "hostname" : "test-dev-mongo02",
+         "networkVlans" : [
+            {
+               "networkSpace" : "PRIVATE",
+               "vlanNumber" : 1271,
+               "id" : 9990741
+            },
+            {
+               "id" : 9990739,
+               "vlanNumber" : 1273,
+               "networkSpace" : "PUBLIC"
+            }
+         ],
+         "tagReferences" : [],
+         "fullyQualifiedDomainName" : "test-dev-mongo02.example.com",
+         "hourlyBillingFlag" : false,
+         "powerState" : {
+            "keyName" : "RUNNING",
+            "name" : "Running"
+         },
+         "status" : {
+            "keyName" : "ACTIVE",
+            "name" : "Active"
+         },
+         "datacenter" : {
+            "name" : "tok02",
+            "longName" : "Tokyo 2",
+            "id" : 999604,
+            "statusId" : 2
+         },
+         "dedicatedAccountHostOnlyFlag" : false,
+         "blockDevices" : [
+            {
+               "diskImageId" : 99019659,
+               "modifyDate" : "",
+               "statusId" : 1,
+               "mountType" : "Disk",
+               "uuid" : "99345678-0000-90ab-a4f2-6787870b1676",
+               "guestId" : 99159233,
+               "id" : 99379175,
+               "device" : "0",
+               "createDate" : "2015-11-30T15:00:28+09:00",
+               "hotPlugFlag" : 0,
+               "bootableFlag" : 1,
+               "mountMode" : "RW"
+            },
+            {
+               "device" : "1",
+               "hotPlugFlag" : 0,
+               "createDate" : "2015-11-30T15:00:36+09:00",
+               "guestId" : 99159233,
+               "id" : 99379179,
+               "mountMode" : "RW",
+               "bootableFlag" : 0,
+               "statusId" : 1,
+               "diskImageId" : 99019661,
+               "modifyDate" : "",
+               "uuid" : "99345678-0000-90ab-6f20-39679951fdd2",
+               "mountType" : "Disk"
+            },
+            {
+               "mountType" : "Disk",
+               "uuid" : "99345678-0000-90ab-b7a1-3d8dc639eb2b",
+               "modifyDate" : "",
+               "diskImageId" : 99019657,
+               "statusId" : 1,
+               "bootableFlag" : 0,
+               "mountMode" : "RW",
+               "id" : 99379177,
+               "guestId" : 99159233,
+               "createDate" : "2015-11-30T15:00:29+09:00",
+               "hotPlugFlag" : 0,
+               "device" : "7"
+            }
+         ],
+         "createDate" : "2015-11-30T14:59:29+09:00",
+         "privateNetworkOnlyFlag" : false
+      },
+      {
+         "privateNetworkOnlyFlag" : false,
+         "createDate" : "2015-12-08T16:22:35+09:00",
+         "blockDevices" : [
+            {
+               "guestId" : 99363151,
+               "id" : 99621585,
+               "device" : "0",
+               "createDate" : "2015-12-08T16:23:35+09:00",
+               "hotPlugFlag" : 0,
+               "bootableFlag" : 1,
+               "mountMode" : "RW",
+               "diskImageId" : 99173855,
+               "modifyDate" : "",
+               "statusId" : 1,
+               "mountType" : "Disk",
+               "uuid" : "99345678-0000-90ab-1d22-5391be3769ce"
+            },
+            {
+               "hotPlugFlag" : 0,
+               "createDate" : "2015-12-08T16:23:45+09:00",
+               "device" : "1",
+               "id" : 99621593,
+               "guestId" : 99363151,
+               "mountMode" : "RW",
+               "bootableFlag" : 0,
+               "statusId" : 1,
+               "modifyDate" : "",
+               "diskImageId" : 99173863,
+               "uuid" : "99345678-0000-90ab-905d-995df6cf82f3",
+               "mountType" : "Disk"
+            },
+            {
+               "mountMode" : "RW",
+               "bootableFlag" : 0,
+               "device" : "2",
+               "createDate" : "2015-12-09T18:04:50+09:00",
+               "hotPlugFlag" : 0,
+               "guestId" : 99363151,
+               "id" : 99665271,
+               "uuid" : "99345678-0000-90ab-6e31-05077dbc447c",
+               "mountType" : "Disk",
+               "statusId" : 1,
+               "diskImageId" : 99204827,
+               "modifyDate" : ""
+            },
+            {
+               "bootableFlag" : 0,
+               "mountMode" : "RW",
+               "guestId" : 99363151,
+               "id" : 99665277,
+               "device" : "4",
+               "hotPlugFlag" : 0,
+               "createDate" : "2015-12-09T18:04:59+09:00",
+               "mountType" : "Disk",
+               "uuid" : "99345678-0000-90ab-d9ca-1626e2487171",
+               "diskImageId" : 99204829,
+               "modifyDate" : "",
+               "statusId" : 1
+            }
+         ],
+         "dedicatedAccountHostOnlyFlag" : false,
+         "datacenter" : {
+            "name" : "hkg02",
+            "longName" : "Hong Kong 2",
+            "statusId" : 2,
+            "id" : 992494
+         },
+         "powerState" : {
+            "keyName" : "RUNNING",
+            "name" : "Running"
+         },
+         "status" : {
+            "keyName" : "ACTIVE",
+            "name" : "Active"
+         },
+         "hourlyBillingFlag" : true,
+         "fullyQualifiedDomainName" : "test-dev-teststorage.example.com",
+         "tagReferences" : [],
+         "networkVlans" : [
+            {
+               "id" : 9990575,
+               "vlanNumber" : 1654,
+               "networkSpace" : "PUBLIC"
+            },
+            {
+               "networkSpace" : "PRIVATE",
+               "id" : 9990577,
+               "vlanNumber" : 2282
+            }
+         ],
+         "hostname" : "test-dev-teststorage",
+         "id" : 99363151,
+         "primaryIpAddress" : "192.168.18.134",
+         "primaryBackendIpAddress" : "10.10.80.168",
+         "globalIdentifier" : "99345678-0000-90ab-95b8-06ac76580a1a",
+         "userData" : [],
+         "operatingSystem" : {
+            "manufacturerLicenseInstance" : "",
+            "passwords" : [
+               {
+                  "password" : "P455w0rd",
+                  "username" : "root"
+               }
+            ],
+            "hardwareId" : "",
+            "id" : 9983373,
+            "softwareLicense" : {
+               "id" : 901,
+               "softwareDescription" : {
+                  "manufacturer" : "CentOS",
+                  "referenceCode" : "CENTOS_6_64",
+                  "name" : "CentOS",
+                  "version" : "6.0-64 LAMP for VSI"
+               },
+               "softwareDescriptionId" : 888
+            }
+         },
+         "networkComponents" : [
+            {
+               "status" : "ACTIVE",
+               "speed" : 100,
+               "maxSpeed" : 100,
+               "primarySubnet" : {
+                  "broadcastAddress" : "10.10.80.191",
+                  "id" : 992737,
+                  "gateway" : "10.10.80.129",
+                  "netmask" : "255.255.255.192",
+                  "networkIdentifier" : "10.10.80.128"
+               },
+               "id" : 9905099,
+               "primaryIpAddress" : "10.10.80.168",
+               "macAddress" : "06:ad:5c:ef:1e:d2",
+               "port" : 0,
+               "name" : "eth"
+            },
+            {
+               "speed" : 100,
+               "maxSpeed" : 100,
+               "status" : "ACTIVE",
+               "name" : "eth",
+               "macAddress" : "06:70:c7:2b:52:a0",
+               "port" : 1,
+               "id" : 9905097,
+               "primarySubnet" : {
+                  "gateway" : "192.168.18.129",
+                  "netmask" : "255.255.255.240",
+                  "networkIdentifier" : "192.168.18.128",
+                  "id" : 9983517,
+                  "broadcastAddress" : "192.168.18.143"
+               },
+               "primaryIpAddress" : "192.168.18.134"
+            }
+         ],
+         "modifyDate" : "2015-12-13T02:24:12+09:00",
+         "provisionDate" : "2015-12-08T16:28:21+09:00",
+         "billingItem" : {
+            "recurringFee" : "2.8275",
+            "id" : 99223075
+         },
+         "maxMemory" : 1024,
+         "maxCpu" : 1,
+         "domain" : "example.com"
+      }
+   ]
+}

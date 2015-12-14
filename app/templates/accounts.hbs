@@ -8,7 +8,11 @@
 <ul>
 {{#each server in account.servers }}
 <li>{{server.id}} {{server.hostname}}.{{server.domain}}
-- {{server.maxCpu}} CPU/{{server.maxMemory}} MB</li>
+- {{server.maxCpu}} CPU/{{server.maxMemory}} MB
+- {{server.createDate}}
+{{server.primaryIpAddress}}
+{{server.hourlyBillingFlag}}
+</li>
 {{/each}}
 </ul>
 {{else}}

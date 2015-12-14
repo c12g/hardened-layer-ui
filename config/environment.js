@@ -15,7 +15,7 @@ module.exports = function(environment) {
 
     SL: {
       host: 'http://localhost:4200',
-      namespace: 'mock/jsonapi',
+      namespace: 'mock/rest',
     },
 
     contentSecurityPolicy: {

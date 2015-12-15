@@ -13,6 +13,7 @@
   <table>
     <thead>
       <tr>
+        <th {{action 'sortBy' 'account.id'}}>Account</th>
         <th {{action 'sortBy' 'id'}}>ID</th>
         <th {{action 'sortBy' 'hostname'}}>Hostname</th>
         <th {{action 'sortBy' 'domain'}}>Domain</th>
@@ -20,12 +21,17 @@
         <th {{action 'sortBy' 'maxMemory'}}>Memory</th>
         <th {{action 'sortBy' 'createDate'}}>Created</th>
 				<th {{action 'sortBy' 'primaryIpAddress'}}>Primary IP</th>
+				<th {{action 'sortBy' 'dedicatedAccountHostOnlyFlag'}}>Dedicated</th>
         <th {{action 'sortBy' 'hourlyBillingFlag'}}>Hourly?</th>
+        <th {{action 'sortBy' 'Fee'}}>Fee</th>
+        <th {{action 'sortBy' 'status.name'}}>Status</th>
+        <th {{action 'sortBy' 'powerState.name'}}>Power</th>
       </tr>
     </thead>
     <tbody>
-      {{#each item in filteredContent}}
+      {{#each filteredContent as |item|}}
       <tr {{action "select" item}} class="clickable {{item.mark}}">
+        <td class="tac">{{item.account.id}}</td>
         <td class="tac">{{item.id}}</td>
         <td class="tac">{{item.hostname}}</td>
         <td class="tac">{{item.domain}}</td>
@@ -33,7 +39,11 @@
         <td class="tac">{{item.maxMemory}}</td>
         <td class="tac">{{item.createDate}}</td>
         <td class="tac">{{item.primaryIpAddress}}</td>
+        <td class="tac">{{item.dedicatedAccountHostOnlyFlag}}</td>
         <td class="tac">{{item.hourlyBillingFlag}}</td>
+        <td class="tac">{{item.billingItem.recurringFee}}</td>
+        <td class="tac">{{item.status.name}}</td>
+        <td class="tac">{{item.powerState.name}}</td>
       </tr>
       {{/each}}
     </tbody>

@@ -19,7 +19,7 @@
       </tr>
     </thead>
     <tbody>
-      {{#each item in filteredContent}}
+      {{#each filteredContent as |item|}}
       <tr {{action "select" item}} class="clickable {{item.mark}}">
         <td class="tac">{{item.id}}</td>
         <td class="tac">{{item.name}}</td>

@@ -3,6 +3,6 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model: function() {
     this.store.findAll('account');
-    return this.store.all('server');
+    return this.store.peekAll('server');
   }
 });

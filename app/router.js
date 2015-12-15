@@ -14,6 +14,10 @@ Router.map(function() {
   this.route('virtual-disk-images');
   this.route('open-tickets');
   this.route('users');
+  this.route('network-components');
+  this.route('datacenters');
+  this.route('block-devices');
+  this.route('network-vlans');
 });
 
 export default Router;

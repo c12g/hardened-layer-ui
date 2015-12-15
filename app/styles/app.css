@@ -1,0 +1,16 @@
+.tar { text-align: right; }
+.tac { text-align: center; }
+.tal { text-align: left; }
+
+.full-width { width: 100%; margin: 15px 10px; }
+.full-width table { width: 100%; }
+
+.table-head-ribbon { text-align: right; padding: 2px; }
+.table-head-ribbon div { display: inline-block; }
+
+table tr { border-bottom: 1px solid #999; }
+table tr:first-child { border-top: 1px solid #999; }
+table tr:last-child { border-bottom: 1px solid #999; }
+
+table th { background: #f7f7f7; padding: 0.2rem 0.1rem;}
+table td { background: #fefefe; padding: 0.2rem 0.1rem; }

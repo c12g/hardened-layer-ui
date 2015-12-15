@@ -1,0 +1,32 @@
+<div class="widget list-table">
+  <div class="table-head-ribbon">
+    <div>
+      Total: {{total}} templates
+    </div>
+    <div class="ui mini icon input">
+      {{input type='text' value=esFilter placeholder='Search...'}}
+      <i class="search icon"></i>
+    </div>
+  </div>
+
+  <div class="table-box">
+  <table>
+    <thead>
+      <tr>
+        <th {{action 'sortBy' 'id'}}>ID</th>
+        <th {{action 'sortBy' 'name'}}>Name</th>
+        <th {{action 'sortBy' 'public'}}>Public?</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each item in filteredContent}}
+      <tr {{action "select" item}} class="clickable {{item.mark}}">
+        <td class="tac">{{item.id}}</td>
+        <td class="tac">{{item.name}}</td>
+        <td class="tac">{{item.publicFlag}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  </div>
+</div>

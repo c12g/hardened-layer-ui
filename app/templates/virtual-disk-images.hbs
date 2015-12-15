@@ -1,11 +1,5 @@
-<ul>
-{{#each item in model }}
-<li>{{item.id}}
-	{{item.uuid}}
-- {{item.capacity}} {{item.units}}
-- {{item.name}}.{{item.description}}
-</li>
-{{/each}}
-</ul>
+<div class="full-width">
+  {{render "tables/virtualDiskImages" model}}
+</div>
 
 {{outlet}}

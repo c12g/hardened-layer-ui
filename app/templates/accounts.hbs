@@ -1,12 +1,5 @@
-<ul>
-{{#each account in model}}
-<li>
-{{account.companyName}}
-(contact: {{account.email}})
-</li>
-{{else}}
-<li>No accounts found.</li>
-{{/each}}
-</ul>
+<div class="full-width">
+  {{render "tables/accounts" model}}
+</div>
 
 {{outlet}}

@@ -1,0 +1,22 @@
+<div class="widget list-table">
+  <div class="table-box">
+  <table>
+    <thead>
+      <tr>
+        <th {{action 'sortBy' 'id'}}>ID</th>
+        <th {{action 'sortBy' 'companyName'}}>Company</th>
+        <th {{action 'sortBy' 'email'}}>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each item in filteredContent}}
+      <tr {{action "select" item}} class="clickable {{item.mark}}">
+        <td class="tac">{{item.id}}</td>
+        <td class="tac">{{item.companyName}}</td>
+        <td class="tac">{{item.email}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  </div>
+</div>

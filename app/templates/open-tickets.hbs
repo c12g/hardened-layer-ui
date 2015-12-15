@@ -1,8 +1,5 @@
-<ul>
-{{#each item in model }}
-<li>{{item.id}} {{item.title}}
-</li>
-{{/each}}
-</ul>
+<div class="full-width">
+  {{render "tables/openTickets" model}}
+</div>
 
 {{outlet}}

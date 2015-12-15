@@ -1,8 +1,5 @@
-<ul>
-{{#each item in model }}
-<li>{{item.id}} {{item.name}} public:{{item.publicFlag}}
-</li>
-{{/each}}
-</ul>
+<div class="full-width">
+  {{render "tables/imageTemplates" model}}
+</div>
 
 {{outlet}}

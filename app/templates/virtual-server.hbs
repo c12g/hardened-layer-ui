@@ -1,0 +1,21 @@
+<h2>Virtual Server {{model.hostname}}</h2>
+<table>
+	<tr>
+		<th>Modified</th>
+		<th>Provisioned</th>
+		<th>Dedicated Host</th>
+		<th>Private Network Only</th>
+		<th>Primary Backend Address</th>
+	</tr>
+	<tr>
+		<td class='tac'>{{model.modifyDate}}</td>
+		<td class='tac'>{{model.provisionDate}}</td>
+		<td class='tac'>{{model.dedicatedAccountHostOnlyFlag}}</td>
+		<td class='tac'>{{model.privateNetworkOnlyFlag}}</td>
+		<td class='tac'>{{model.primaryBackendIpAddress}}</td>
+	</tr>
+</table>
+
+{{render "tables.block-devices" model.blockDevices}}
+{{render "tables.network-vlans" model.networkVlans}}
+{{render "tables.network-components" model.networkComponents}}

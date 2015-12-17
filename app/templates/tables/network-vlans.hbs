@@ -1,0 +1,33 @@
+<div class="widget list-table">
+  <div class="table-head-ribbon">
+		<div class="table-title">VLANs</div>
+    <div>
+      Total: {{total}} VLANs
+    </div>
+    <div class="ui mini icon input">
+      {{input type='text' value=esFilter placeholder='Search...'}}
+      <i class="search icon"></i>
+    </div>
+  </div>
+
+  <div class="table-box">
+  <table>
+    <thead>
+      <tr>
+        <th {{action 'sortBy' 'id'}}>ID</th>
+        <th {{action 'sortBy' 'maxMemory'}}>Network Space</th>
+        <th {{action 'sortBy' 'createDate'}}>VLAN Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each filteredContent as |item|}}
+      <tr {{action "select" item}} class="clickable {{item.mark}}">
+        <td class="tac">{{item.id}}</td>
+        <td class="tac">{{item.networkSpace}}</td>
+        <td class="tac">{{item.vlanNumber}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  </div>
+</div>

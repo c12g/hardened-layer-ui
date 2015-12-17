@@ -1,8 +1,9 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
+  type: DS.attr('string', {defaultValue: 'network-vlan'}),
   networkSpace: DS.attr(),
   vlanNumber: DS.attr(),
 
-  virtualServer: DS.hasMany('virtualServer'),
+  virtualServers: DS.hasMany('virtualServer'),
 });

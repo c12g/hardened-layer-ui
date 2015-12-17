@@ -1,0 +1,39 @@
+<div class="widget list-table">
+  <div class="table-head-ribbon">
+		<div class="table-title">Network Devices</div>
+    <div>
+      Total: {{total}} devices
+    </div>
+    <div class="ui mini icon input">
+      {{input type='text' value=esFilter placeholder='Search...'}}
+      <i class="search icon"></i>
+    </div>
+  </div>
+
+  <div class="table-box">
+  <table>
+    <thead>
+      <tr>
+        <th {{action 'sortBy' 'id'}}>ID</th>
+        <th {{action 'sortBy' 'name'}}>Name</th>
+        <th {{action 'sortBy' 'port'}}>Port</th>
+        <th {{action 'sortBy' 'primaryIpAddress'}}>Primary Address</th>
+        <th {{action 'sortBy' 'macAddress'}}>MAC Address</th>
+        <th {{action 'sortBy' 'speed'}}>Speed</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each filteredContent as |item|}}
+      <tr {{action "select" item}} class="clickable {{item.mark}}">
+        <td class="tac">{{item.id}}</td>
+        <td class="tar">{{item.name}}</td>
+        <td class="tal">{{item.port}}</td>
+        <td class="tac">{{item.primaryIpAddress}}</td>
+        <td class="tac">{{item.macAddress}}</td>
+        <td class="tac">{{item.speed}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  </div>
+</div>

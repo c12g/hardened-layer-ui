@@ -1,6 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
+  type: DS.attr('string', {defaultValue: 'virtual-server'}),
   hostname: DS.attr('string'),
   domain: DS.attr('string'),
   maxCpu: DS.attr('string'),
@@ -20,8 +21,6 @@ export default DS.Model.extend({
   billingFee: DS.attr(),
   status: DS.attr(),
   powerState: DS.attr(),
-
-  testValue: DS.attr(),
 
   account: DS.belongsTo('account', {async: true}),
   imageTemplate: DS.belongsTo('imageTemplate', {async: true}),

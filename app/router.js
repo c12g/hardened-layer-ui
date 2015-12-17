@@ -9,7 +9,9 @@ Router.map(function() {
   this.route('accounts');
   this.route('servers');
   this.route('image-templates');
-  this.route('virtual-servers');
+  this.resource('virtual-servers', { path: '/virtual-servers' }, function() {
+    this.resource('virtual-server', { path: '/:virtual-server_id' });
+  });
   this.route('bare-metal-servers');
   this.route('virtual-disk-images');
   this.route('open-tickets');
@@ -17,7 +19,9 @@ Router.map(function() {
   this.route('network-components');
   this.route('datacenters');
   this.route('block-devices');
-  this.route('network-vlans');
+  this.resource('network-vlans', { path: '/network-vlans' }, function() {
+    this.resource('network-vlan', { path: '/:network-vlan_id' });
+  });
 });
 
 export default Router;

@@ -23,10 +23,11 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
         vs.powerState = vs.powerState.name;
         vs.status = vs.status.name;
         var bl = vs.blockDevices.length;
-        for (var j = 0; j < len; j++) {
+        for (var j = 0; j < bl; j++) {
           vs.blockDevices[j].virtualDiskImage = vs.blockDevices[j].diskImageId;
         }
       }
+
       return hash;
     }
   },

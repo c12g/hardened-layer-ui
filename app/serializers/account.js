@@ -1,6 +1,6 @@
 import SoftLayerSerializer from './softlayer';
 
-export default SoftLayerSerializer.extend(DS.EmbeddedRecordsMixin, {
+export default SoftLayerSerializer.extend({
   attrs: {
     servers: { embedded: 'always' },
     imageTemplates: { embedded: 'always' },

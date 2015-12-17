@@ -8,4 +8,5 @@ export default DS.Model.extend({
   units: DS.attr('string'),
 
   account: DS.belongsTo('account', {async: true}),
+  blockDevices: DS.hasMany('blockDevice', {async: true}),
 });

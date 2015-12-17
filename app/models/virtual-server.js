@@ -21,4 +21,8 @@ export default DS.Model.extend({
   powerState: DS.attr({ name: DS.attr('string') }),
 
   account: DS.belongsTo('account', {async: true}),
+  datacenter: DS.belongsTo('datacenter', {async: true}),
+  blockDevices: DS.hasMany('blockDevice', {async: true}),
+  networkComponents: DS.hasMany('networkComponent', {async: true}),
+  networkVlans: DS.hasMany('networkVlan', {async: true}),
 });

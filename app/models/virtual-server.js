@@ -11,16 +11,21 @@ export default DS.Model.extend({
   provisionDate: DS.attr('date'),
 
   dedicatedAccountHostOnlyFlag: DS.attr('boolean'),
+  privateNetworkOnlyFlag: DS.attr('boolean'),
   hourlyBillingFlag: DS.attr('boolean'),
 
   primaryIpAddress: DS.attr('string'),
   primaryBackendIpAddress: DS.attr('string'),
 
-  billingItem: DS.attr({ recurringFee: DS.attr('string') }),
-  status: DS.attr({ name: DS.attr('string') }),
-  powerState: DS.attr({ name: DS.attr('string') }),
+  billingFee: DS.attr(),
+  status: DS.attr(),
+  powerState: DS.attr(),
+
+  testValue: DS.attr(),
 
   account: DS.belongsTo('account', {async: true}),
+  imageTemplate: DS.belongsTo('imageTemplate', {async: true}),
+
   datacenter: DS.belongsTo('datacenter', {async: true}),
   blockDevices: DS.hasMany('blockDevice', {async: true}),
   networkComponents: DS.hasMany('networkComponent', {async: true}),

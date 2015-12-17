@@ -1,7 +1,7 @@
 <div class="widget list-table">
   <div class="table-head-ribbon">
     <div>
-      Total: {{total}} servers
+      Total: {{total}} virtual disks
     </div>
     <div class="ui mini icon input">
       {{input type='text' value=esFilter placeholder='Search...'}}
@@ -18,6 +18,11 @@
         <th {{action 'sortBy' 'description'}}>Description</th>
         <th {{action 'sortBy' 'capacity'}}>Capacity</th>
         <th {{action 'sortBy' 'units'}}>Units</th>
+        <th {{action 'sortBy' 'blockDevice.virtualServer.hostname'}}>Hostname</th>
+        <th {{action 'sortBy' 'blockDevice.device'}}>Dev</th>
+        <th {{action 'sortBy' 'blockDevice.mountType'}}>Type</th>
+        <th {{action 'sortBy' 'blockDevice.mountMode'}}>Mode</th>
+        <th {{action 'sortBy' 'blockDevice.bootableFlag'}}>Boot?</th>
       </tr>
     </thead>
     <tbody>
@@ -28,6 +33,11 @@
         <td class="tac">{{item.description}}</td>
         <td class="tar">{{item.capacity}}</td>
         <td class="tal">{{item.units}}</td>
+        <td class="tal">{{item.blockDevice.virtualServer.hostname}}</td>
+        <td class="tal">{{item.blockDevice.device}}</td>
+        <td class="tal">{{item.blockDevice.mountType}}</td>
+        <td class="tal">{{item.blockDevice.mountMode}}</td>
+        <td class="tal">{{item.blockDevice.bootableFlag}}</td>
       </tr>
       {{/each}}
     </tbody>

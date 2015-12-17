@@ -7,6 +7,6 @@ export default DS.RESTAdapter.extend({
 
   init: function() {
     this._super();
-    console.log('SoftLayerAdapter: ' + config.SL.host + '...');
+    //console.log('SoftLayerAdapter: ' + config.SL.host + '...');
   }
 });

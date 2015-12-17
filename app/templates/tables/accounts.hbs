@@ -6,6 +6,10 @@
         <th {{action 'sortBy' 'id'}}>ID</th>
         <th {{action 'sortBy' 'companyName'}}>Company</th>
         <th {{action 'sortBy' 'email'}}>Email</th>
+        <th {{action 'sortBy' 'createDate'}}>Create Data</th>
+        <th {{action 'sortBy' 'modifyDate'}}>Modify Date</th>
+        <th {{action 'sortBy' 'state'}}>State</th>
+        <th {{action 'sortBy' 'isReseller'}}>Email</th>
       </tr>
     </thead>
     <tbody>
@@ -14,6 +18,10 @@
         <td class="tac">{{item.id}}</td>
         <td class="tac">{{item.companyName}}</td>
         <td class="tac">{{item.email}}</td>
+        <td class="tac">{{time-format item.createDate 'YYYY-MM-DD HH:MM'}}</td>
+        <td class="tac">{{time-format item.modifyDate 'YYYY-MM-DD HH:MM'}}</td>
+        <td class="tac">{{item.state}}</td>
+        <td class="tac">{{item.isReseller}}</td>
       </tr>
       {{/each}}
     </tbody>

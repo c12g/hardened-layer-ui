@@ -7,4 +7,5 @@ export default DS.Model.extend({
   globalIdentifier: DS.attr('string'),
 
   account: DS.belongsTo('account', {async: true}),
+  virtualServers: DS.hasMany('virtualServer', {async: true}),
 });

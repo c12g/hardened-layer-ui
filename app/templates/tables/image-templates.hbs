@@ -15,7 +15,10 @@
       <tr>
         <th {{action 'sortBy' 'id'}}>ID</th>
         <th {{action 'sortBy' 'name'}}>Name</th>
-        <th {{action 'sortBy' 'public'}}>Public?</th>
+        <th {{action 'sortBy' 'publicFlag'}}>Public?</th>
+        <th {{action 'sortBy' 'flexImageFlag'}}>FlexImage?</th>
+        <th {{action 'sortBy' 'globalIdentifier'}}>globalID</th>
+        <th {{action 'sortBy' 'virtualServers.length'}}>VMs</th>
       </tr>
     </thead>
     <tbody>
@@ -24,6 +27,9 @@
         <td class="tac">{{item.id}}</td>
         <td class="tac">{{item.name}}</td>
         <td class="tac">{{item.publicFlag}}</td>
+        <td class="tac">{{item.flexImageFlag}}</td>
+        <td class="tac">{{item.globalIdentifier}}</td>
+        <td class="tac">{{item.virtualServers.length}}</td>
       </tr>
       {{/each}}
     </tbody>

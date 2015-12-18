@@ -4,8 +4,9 @@ export default DS.Model.extend({
   type: DS.attr('string', {defaultValue: 'virtual-server'}),
   hostname: DS.attr('string'),
   domain: DS.attr('string'),
-  maxCpu: DS.attr('string'),
-  maxMemory: DS.attr('string'),
+  cpus: DS.attr(),
+  memories: DS.attr(),
+  os: DS.attr(),
 
   createDate: DS.attr('date'),
   modifyDate: DS.attr('date'),

@@ -10,7 +10,10 @@ Router.map(function() {
   this.route('servers');
   this.route('image-templates');
   this.resource('virtual-servers', { path: '/virtual-servers' }, function() {
-    this.resource('virtual-server', { path: '/:virtual-server_id' });
+    this.resource('virtual-server', { path: '/:server_id' });
+  });
+  this.resource('bare-metal-servers', function() {
+    this.resource('bare-metal-server', { path: '/:server_id'});
   });
   this.route('bare-metal-servers');
   this.route('virtual-disk-images');

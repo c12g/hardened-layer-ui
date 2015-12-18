@@ -16,16 +16,31 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
       var len = hash.virtualServers.length;
       for (var i = 0; i < len; i++) {
         var vs = hash.virtualServers[i];
+        vs.cpus = vs.maxCpu;
+        vs.memories = vs.maxMemory;
+
+        vs.powerState = vs.powerState.name;
+        vs.status = vs.status.name;
         if (vs.blockDeviceTemplateGroup) {
           vs.imageTemplate = vs.blockDeviceTemplateGroup.id
         }
-        vs.billingFee = vs.billingItem.recurringFee;
-        vs.powerState = vs.powerState.name;
-        vs.status = vs.status.name;
         var bl = vs.blockDevices.length;
         for (var j = 0; j < bl; j++) {
           vs.blockDevices[j].virtualDiskImage = vs.blockDevices[j].diskImageId;
         }
+
+        vs.billingFee = vs.billingItem.recurringFee;
+	vs.os = vs.operatingSystem.softwareLicense.softwareDescription.name;
+      }
+
+      var len = hash.bareMetalServers.length;
+      for (var i = 0; i < len; i++) {
+        var vs = hash.bareMetalServers[i];
+        vs.cpus = vs.processorPhysicalCoreAmount;
+        vs.memories = vs.memoryCapacity;
+
+        vs.billingFee = vs.billingItem.recurringFee;
+	vs.os = vs.operatingSystem.softwareLicense.softwareDescription.name;
       }
 
       return hash;

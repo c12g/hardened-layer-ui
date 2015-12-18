@@ -16,11 +16,11 @@
         <th {{action 'sortBy' 'id'}}>ID</th>
         <th {{action 'sortBy' 'hostname'}}>Hostname</th>
         <th {{action 'sortBy' 'domain'}}>Domain</th>
-        <th {{action 'sortBy' 'maxCpu'}}>CPU</th>
-        <th {{action 'sortBy' 'maxMemory'}}>Memory</th>
-        <th {{action 'sortBy' 'createDate'}}>Created</th>
-				<th {{action 'sortBy' 'primaryIpAddress'}}>Primary IP</th>
-				<th {{action 'sortBy' 'dedicatedAccountHostOnlyFlag'}}>Dedicated</th>
+        <th {{action 'sortBy' 'cpus'}}>CPU</th>
+        <th {{action 'sortBy' 'memories'}}>Memory</th>
+        <th {{action 'sortBy' 'provisionDate'}}>Provision Date</th>
+        <th {{action 'sortBy' 'primaryIpAddress'}}>Primary IP</th>
+        <th {{action 'sortBy' 'os'}}>OS</th>
         <th {{action 'sortBy' 'hourlyBillingFlag'}}>Hourly?</th>
         <th {{action 'sortBy' 'billingFee'}}>Fee</th>
         <th {{action 'sortBy' 'status'}}>Status</th>
@@ -35,11 +35,11 @@
         <td class="tac">{{item.id}}</td>
         <td class="tac">{{item.hostname}}</td>
         <td class="tac">{{item.domain}}</td>
-        <td class="tac">{{item.maxCpu}}</td>
-        <td class="tac">{{item.maxMemory}}</td>
-        <td class="tac">{{time-format item.createDate 'YYYY-MM-DD HH:MM'}}</td>
+        <td class="tac">{{item.cpus}}</td>
+        <td class="tac">{{item.memories}}</td>
+        <td class="tac">{{time-format item.provisionDate 'YYYY-MM-DD HH:MM'}}</td>
         <td class="tac">{{item.primaryIpAddress}}</td>
-        <td class="tac">{{item.dedicatedAccountHostOnlyFlag}}</td>
+        <td class="tac">{{item.os}}</td>
         <td class="tac">{{item.hourlyBillingFlag}}</td>
         <td class="tac">{{item.billingFee}}</td>
         <td class="tac">{{item.status}}</td>

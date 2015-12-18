@@ -50,7 +50,7 @@ export default Ember.Mixin.create({
     },
 
     select: function(target) {
-      this.transitionToRoute(target.rName, target);
+      this.transitionToRoute(target.get('type'), target.id);
     },
   },
 });

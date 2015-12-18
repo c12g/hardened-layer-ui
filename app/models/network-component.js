@@ -10,4 +10,5 @@ export default DS.Model.extend({
   status: DS.attr(),
 
   virtualServer: DS.belongsTo('virtualServer'),
+  bareMetalServers: DS.hasMany('bareMetalServer'),
 });

@@ -1,5 +1,6 @@
 <div class="widget list-table">
   <div class="table-head-ribbon">
+    <div class="table-title">Servers</div>
     <div>
       Total: {{total}} servers
     </div>
@@ -10,7 +11,7 @@
   </div>
 
   <div class="table-box">
-  <table>
+  <table class="styled filled">
     <thead>
       <tr>
         <th {{action 'sortBy' 'id'}}>ID</th>
@@ -31,9 +32,10 @@
     </thead>
     <tbody>
       {{#each filteredContent as |item|}}
-      <tr {{action "select" item}} class="clickable {{item.mark}}">
+      <tr {{action "select" item}} class="clickable {{item.flag}}">
         <td class="tac">{{item.id}}</td>
-        <td class="tac">{{item.hostname}}</td>
+        <td class="tac">{{#ui-popup variation="small"
+          html=item.popup}}{{item.hostname}}{{/ui-popup}}</td>
         <td class="tac">{{item.domain}}</td>
         <td class="tac">{{item.cpus}}</td>
         <td class="tac">{{item.memories}}</td>
@@ -51,4 +53,19 @@
     </tbody>
   </table>
   </div>
+
+  {{#ui-accordion class="help widget"}}
+  <div class="title tar"><i class="grey help icon"></i></div>
+  <div class="content widget help">
+    <h5>서버 목록</h5>
+    <p>
+    사용자의 모든 서버가 표시됩니다. 원하는 서버를 클릭하면 해당 서버의
+    상세정보가 함께 표시됩니다.
+    </p>
+    <dl>
+      <dt></dt>
+      <dd></dd>
+    </dl>
+  </div>
+  {{/ui-accordion}}
 </div>

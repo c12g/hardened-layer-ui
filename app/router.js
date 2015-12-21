@@ -25,6 +25,7 @@ Router.map(function() {
   this.resource('network-vlans', { path: '/network-vlans' }, function() {
     this.resource('network-vlan', { path: '/:network-vlan_id' });
   });
+  this.route('dashboard');
 });
 
 export default Router;

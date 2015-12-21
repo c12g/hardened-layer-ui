@@ -1,5 +1,6 @@
 {{#ui-sidebar class="inverted vertical menu"}}
 	{{link-to 'Home' 'index' class='item'}}
+	{{link-to 'Dashboard' 'dashboard' class='item'}}
 	{{link-to 'Account' 'accounts' class='item'}}
 	{{link-to 'Servers' 'servers' class='item'}}
 	{{link-to 'Virtual Servers' 'virtual-servers' class='item'}}
@@ -11,7 +12,7 @@
 	{{link-to 'VLANs' 'network-vlans' class='item'}}
 {{/ui-sidebar}}
 
-<div class="ui fixed inverted small menu">
+<div class="ui top fixed inverted small menu">
 	<a class="launch icon item" onClick="$('.ui.sidebar').sidebar('toggle');"
 		><i class="content icon"></i></a>
 	<a class="active red item">Hardened Layer</a>

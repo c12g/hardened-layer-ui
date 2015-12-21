@@ -1,33 +1,14 @@
-import DS from 'ember-data';
+import Server from './server';
 
-export default DS.Model.extend({
+export default Server.extend({
   type: DS.attr('string', {defaultValue: 'virtual-server'}),
-  hostname: DS.attr('string'),
-  domain: DS.attr('string'),
-  cpus: DS.attr(),
-  memories: DS.attr(),
-  os: DS.attr(),
 
   createDate: DS.attr('date'),
   modifyDate: DS.attr('date'),
-  provisionDate: DS.attr('date'),
-
-  dedicatedAccountHostOnlyFlag: DS.attr('boolean'),
-  privateNetworkOnlyFlag: DS.attr('boolean'),
-  hourlyBillingFlag: DS.attr('boolean'),
-
-  primaryIpAddress: DS.attr('string'),
-  primaryBackendIpAddress: DS.attr('string'),
-
-  billingFee: DS.attr(),
   status: DS.attr(),
   powerState: DS.attr(),
+  dedicatedAccountHostOnlyFlag: DS.attr('boolean'),
 
-  account: DS.belongsTo('account', {async: true}),
   imageTemplate: DS.belongsTo('imageTemplate', {async: true}),
-
-  datacenter: DS.belongsTo('datacenter', {async: true}),
   blockDevices: DS.hasMany('blockDevice', {async: true}),
-  networkComponents: DS.hasMany('networkComponent', {async: true}),
-  networkVlans: DS.hasMany('networkVlan', {async: true}),
 });

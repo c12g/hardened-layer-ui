@@ -36,7 +36,7 @@ export default Ember.Mixin.create({
       }
       return false;
     });
-  }.property('@each', 'esFilter'),
+  }.property('model.[]', 'esFilter'),
 
   total: function() {
     return this.get('model.length');

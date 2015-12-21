@@ -7,40 +7,42 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
   },
 
   normalize: function(model, hash, prop) {
-    console.log('normalize for ' + model);
+    //console.log('normalize for ' + model);
     return this._super(model, hash, prop);
   },
 
   normalizeHash: {
     accounts: function(hash) {
-      var len = hash.virtualServers.length;
-      for (var i = 0; i < len; i++) {
-        var vs = hash.virtualServers[i];
-        vs.cpus = vs.maxCpu;
-        vs.memories = vs.maxMemory;
+      var len, i, sv;
 
-        vs.powerState = vs.powerState.name;
-        vs.status = vs.status.name;
-        if (vs.blockDeviceTemplateGroup) {
-          vs.imageTemplate = vs.blockDeviceTemplateGroup.id
+      len = hash.virtualServers.length;
+      for (i = 0; i < len; i++) {
+        sv = hash.virtualServers[i];
+        sv.cpus = sv.maxCpu;
+        sv.memories = sv.maxMemory;
+
+        sv.powerState = sv.powerState.name;
+        sv.status = sv.status.name;
+        if (sv.blockDeviceTemplateGroup) {
+          sv.imageTemplate = sv.blockDeviceTemplateGroup.id;
         }
-        var bl = vs.blockDevices.length;
+        var bl = sv.blockDevices.length;
         for (var j = 0; j < bl; j++) {
-          vs.blockDevices[j].virtualDiskImage = vs.blockDevices[j].diskImageId;
+          sv.blockDevices[j].virtualDiskImage = sv.blockDevices[j].diskImageId;
         }
 
-        vs.billingFee = vs.billingItem.recurringFee;
-	vs.os = vs.operatingSystem.softwareLicense.softwareDescription.name;
+        sv.billingFee = sv.billingItem.recurringFee;
+        sv.os = sv.operatingSystem.softwareLicense.softwareDescription.name;
       }
 
-      var len = hash.bareMetalServers.length;
-      for (var i = 0; i < len; i++) {
-        var vs = hash.bareMetalServers[i];
-        vs.cpus = vs.processorPhysicalCoreAmount;
-        vs.memories = vs.memoryCapacity;
+      len = hash.bareMetalServers.length;
+      for (i = 0; i < len; i++) {
+        sv = hash.bareMetalServers[i];
+        sv.cpus = sv.processorPhysicalCoreAmount;
+        sv.memories = sv.memoryCapacity;
 
-        vs.billingFee = vs.billingItem.recurringFee;
-	vs.os = vs.operatingSystem.softwareLicense.softwareDescription.name;
+        sv.billingFee = sv.billingItem.recurringFee;
+        sv.os = sv.operatingSystem.softwareLicense.softwareDescription.name;
       }
 
       return hash;

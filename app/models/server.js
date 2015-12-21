@@ -17,7 +17,7 @@ export default DS.Model.extend({
   primaryBackendIpAddress: DS.attr('string'),
   // billing
   hourlyBillingFlag: DS.attr('boolean'),
-  billingFee: DS.attr(),
+  billingFee: DS.attr('number'),
 
   account: DS.belongsTo('account', {async: true}),
   datacenter: DS.belongsTo('datacenter', {async: true}),

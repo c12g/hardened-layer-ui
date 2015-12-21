@@ -3,7 +3,7 @@ import EsTable from '../../mixins/es-table';
 
 export default Ember.ArrayController.extend(EsTable, {
   esFilter: '',
-  esFields: ['networkSpace', 'vlanNumber'],
-  esSorter: ['networkSpace'],
+  esFields: ['networkSpace', 'name', 'vlanNumber'],
+  esSorter: ['networkSpace', 'name', 'vlanNumber'],
 });
 

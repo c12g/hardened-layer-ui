@@ -15,4 +15,5 @@ export default DS.Model.extend({
   imageTemplates: DS.hasMany('imageTemplate', {async: true}),
   openTickets: DS.hasMany('openTicket', {async: true}),
   virtualDiskImages: DS.hasMany('virtualDiskImage', {async: true}),
+  networkVlans: DS.hasMany('networkVlan', {async: true}),
 });

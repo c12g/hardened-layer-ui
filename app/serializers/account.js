@@ -9,5 +9,6 @@ export default SoftLayerSerializer.extend({
     virtualDiskImages: { embedded: 'always' },
     virtualServers: { embedded: 'always' },
     bareMetalServers: { embedded: 'always' },
+    networkVlans: { embedded: 'always' },
   }
 });

@@ -15,7 +15,8 @@
     <thead>
       <tr>
         <th {{action 'sortBy' 'id'}}>ID</th>
-        <th {{action 'sortBy' 'maxMemory'}}>Network Space</th>
+        <th {{action 'sortBy' 'networkSpace'}}>Network Space</th>
+        <th {{action 'sortBy' 'name'}}>Name</th>
         <th {{action 'sortBy' 'createDate'}}>VLAN Number</th>
       </tr>
     </thead>
@@ -24,6 +25,7 @@
       <tr {{action "select" item}} class="clickable {{item.mark}}">
         <td class="tac">{{item.id}}</td>
         <td class="tac">{{item.networkSpace}}</td>
+        <td class="tac">{{item.name}}</td>
         <td class="tac">{{item.vlanNumber}}</td>
       </tr>
       {{/each}}

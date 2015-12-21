@@ -18,8 +18,8 @@
         <td class="tac">{{item.id}}</td>
         <td class="tac">{{item.companyName}}</td>
         <td class="tac">{{item.email}}</td>
-        <td class="tac">{{time-format item.createDate 'YYYY-MM-DD HH:MM'}}</td>
-        <td class="tac">{{time-format item.modifyDate 'YYYY-MM-DD HH:MM'}}</td>
+        <td class="tac">{{moment-format item.createDate 'YYYY-MM-DD'}}</td>
+        <td class="tac">{{moment-format item.modifyDate 'YYYY-MM-DD'}}</td>
         <td class="tac">{{item.state}}</td>
         <td class="tac">{{item.isReseller}}</td>
       </tr>

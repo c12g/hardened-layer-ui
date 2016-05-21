@@ -49,7 +49,7 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
         sv.cpus = sv.processorPhysicalCoreAmount;
         sv.memories = sv.memoryCapacity;
 
-        sv.powerState = sv.hardwareStatus.status;
+        sv.status = sv.hardwareStatus.status;
         if (typeof sv.activeTransaction !== 'undefined' &&
             sv.activeTransaction !== null) {
           sv.transaction = sv.activeTransaction.transactionStatus.name;

@@ -2,11 +2,11 @@
   "raidtest": 120.000,
   "test-bm-00": -1.000,
   "testvga": 209.000,
-  "must": 1.909,
+  "must": 1.978,
   "test-2": -1.000,
   "test-by-00": 155.000,
   "test-vm-long": 15.000,
   "testvm-kth": 15.000,
-  "vmbh01": 3.795,
-  "vmbh02": 3.772
+  "vmbh01": 3.841,
+  "vmbh02": 3.841
 }

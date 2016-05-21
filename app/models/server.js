@@ -19,6 +19,7 @@ export default DS.Model.extend({
   hourlyBillingFlag: DS.attr('boolean'),
   billingFee: DS.attr('number'),
   //
+  status: DS.attr(),
   transaction: DS.attr('string'),
 
   account: DS.belongsTo('account', {async: true}),
@@ -28,9 +29,9 @@ export default DS.Model.extend({
 
   flag: function() {
     var flag = '';
-    if (this.get('transaction') !== undefined) { flag = flag + ' transaction'; }
-    if (this.get('status') !== 'Active') { flag = flag + ' status'; }
-    if (this.get('powerState') !== 'Running') { flag = flag + ' power'; }
+    if (this.get('transaction') !== undefined) { flag += ' transaction'; }
+    if (this.get('status').toUpperCase() !== 'ACTIVE') { flag += ' status'; }
+    if (this.get('powerState') !== 'Running') { flag += ' power'; }
     return flag;
   }.property('status', 'powerState', 'transaction'),
 

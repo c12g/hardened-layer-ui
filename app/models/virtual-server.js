@@ -5,7 +5,6 @@ export default Server.extend({
 
   createDate: DS.attr('date'),
   modifyDate: DS.attr('date'),
-  status: DS.attr(),
   powerState: DS.attr(),
   dedicatedAccountHostOnlyFlag: DS.attr('boolean'),
 

@@ -33,19 +33,19 @@
     <tbody>
       {{#each filteredContent as |item|}}
       <tr {{action "select" item}} class="clickable {{item.flag}}">
-        <td class="tac">{{item.id}}</td>
-        <td class="tac">{{#ui-popup variation="small"
+        <td class="tac id">{{item.id}}</td>
+        <td class="tac hostname">{{#ui-popup variation="small"
           html=item.popup}}{{item.hostname}}{{/ui-popup}}</td>
         <td class="tac">{{item.domain}}</td>
-        <td class="tac">{{item.cpus}}</td>
-        <td class="tac">{{item.memories}}</td>
+        <td class="tac cpu">{{item.cpus}}</td>
+        <td class="tac memory">{{item.memories}}</td>
         <td class="tac">{{moment-format item.provisionDate 'YYYY-MM-DD'}}</td>
         <td class="tac">{{item.primaryIpAddress}}</td>
-        <td class="tac">{{item.os}}</td>
+        <td class="tac os">{{item.os}}</td>
         <td class="tac">{{item.hourlyBillingFlag}}</td>
         <td class="tac">{{item.billingFee}}</td>
-        <td class="tac">{{item.status}}</td>
-        <td class="tac">{{item.powerState}}</td>
+        <td class="tac status">{{item.status}}</td>
+        <td class="tac power">{{item.powerState}}</td>
         <td class="tac">{{item.datacenter.longName}}</td>
         <td class="tac">{{item.imageTemplate.name}}</td>
       </tr>

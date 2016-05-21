@@ -31,8 +31,16 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
           sv.blockDevices[j].virtualDiskImage = sv.blockDevices[j].diskImageId;
         }
 
-        sv.billingFee = sv.billingItem.recurringFee;
-        sv.os = sv.operatingSystem.softwareLicense.softwareDescription.name;
+        if (typeof sv.activeTransaction !== 'undefined' &&
+            sv.activeTransaction !== null) {
+          sv.transaction = sv.activeTransaction.transactionStatus.friendlyName;
+        }
+        if (typeof sv.billingItem !== 'undefined') {
+          sv.billingFee = sv.billingItem.recurringFee;
+        }
+        if (typeof sv.operatingSystem !== 'undefined') {
+          sv.os = sv.operatingSystem.softwareLicense.softwareDescription.name;
+        }
       }
 
       len = hash.bareMetalServers.length;
@@ -41,8 +49,17 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
         sv.cpus = sv.processorPhysicalCoreAmount;
         sv.memories = sv.memoryCapacity;
 
-        sv.billingFee = sv.billingItem.recurringFee;
-        sv.os = sv.operatingSystem.softwareLicense.softwareDescription.name;
+        sv.powerState = sv.hardwareStatus.status;
+        if (typeof sv.activeTransaction !== 'undefined' &&
+            sv.activeTransaction !== null) {
+          sv.transaction = sv.activeTransaction.transactionStatus.name;
+        }
+        if (typeof sv.billingItem !== 'undefined') {
+          sv.billingFee = sv.billingItem.recurringFee;
+        }
+        if (typeof sv.operatingSystem !== 'undefined') {
+          sv.os = sv.operatingSystem.softwareLicense.softwareDescription.name;
+        }
       }
 
       return hash;

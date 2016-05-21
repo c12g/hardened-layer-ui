@@ -1,14 +1,12 @@
 {
-  "cbt-dev-testbaremetal": 102.000,
-  "CBT-TEST-DB": 2.601,
-  "CBT-TEST-WEBWAS01": 2.601,
-  "CBT-TEST-WEBWAS02": 1.326,
-  "CBT-dev-image": 5.499,
-  "CBT-dev-mongo02": 12.710,
-  "CBT-dev-teststorage": 6.006,
-  "CBT-prod-atlassian": 12.710,
-  "bmt-2x2-1g-25loc-dal9-pub": 2.194,
-  "bmt-2x2-1g-25san-dal6-pvt": 2.194,
-  "bmt-2x2-1g-25san-dal9-pub": 2.194,
-  "bmt-2x2-1g-25san-dal9-pvt": 2.194
+  "raidtest": 120.000,
+  "test-bm-00": -1.000,
+  "testvga": 209.000,
+  "must": 1.909,
+  "test-2": -1.000,
+  "test-by-00": 155.000,
+  "test-vm-long": 15.000,
+  "testvm-kth": 15.000,
+  "vmbh01": 3.795,
+  "vmbh02": 3.772
 }

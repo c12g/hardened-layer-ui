@@ -38,3 +38,7 @@ table th { background: #000; color: #ccc; }
 table th, table td { padding: 0.2rem 0.1rem;}
 table tr:nth-child(even) td { background: #fefefe; }
 table tr:nth-child(odd) td { background: #f6f6f6; }
+
+table tr.transaction td.hostname { background-color: #fcc; }
+table tr.status td.status { color: #f00; }
+table tr.power td.power { color: #f00; }
